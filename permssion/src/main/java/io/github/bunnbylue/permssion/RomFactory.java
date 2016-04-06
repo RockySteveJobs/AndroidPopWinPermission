@@ -59,7 +59,7 @@ public class RomFactory {
 
 
 	private static Rom loadRomInternal(Context context) {
-
+		AppOpsManagerHelper.init();
 		Rom mRom = new MiuiRom(context);
 		if (mRom.isRuning()) {
 			return mRom;
